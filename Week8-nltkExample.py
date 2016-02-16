@@ -5,8 +5,8 @@ The script includes the following pre-processing steps for text:
 - Ngrams
 - POS tagging
 """
-
-import nltk.data
+import nltk
+#import nltk.data
 from nltk.util import ngrams
 import re
 
@@ -34,7 +34,7 @@ for sentence in sentences:
 
     #tokenize the sentence
     terms = nltk.word_tokenize(sentence.lower())   
-    
+    #terms=sentence.split()
     tagged_terms=nltk.pos_tag(terms)#do POS tagging on the tokenized sentence
     
     for pair in tagged_terms: 
